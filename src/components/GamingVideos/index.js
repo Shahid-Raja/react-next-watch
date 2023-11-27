@@ -57,7 +57,7 @@ class GamingVideos extends Component {
       const updatedData = data.videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
-        thumbnailURL: eachVideo.thumbnail_url,
+        thumbnailUrl: eachVideo.thumbnail_url,
         viewCount: eachVideo.view_count,
       }))
       this.setState({

@@ -60,7 +60,7 @@ class Home extends Component {
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
-      const updatedData = data.Videos.map(eachVideo => ({
+      const updatedData = data.videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
         thumbnailUrl: eachVideo.thumbnail_Url,
