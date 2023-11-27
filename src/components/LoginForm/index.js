@@ -29,8 +29,8 @@ class LoginForm extends Component {
     this.setState({[event.target.name]: event.target.value})
   }
 
-  onShowPassword = event => {
-    this.setState({[event.target.name]: event.target.value})
+  onShowPassword = () => {
+    this.setState(prevState => ({showPassword: !prevState.showPassword}))
   }
 
   onSubmitSuccess = jwToken => {

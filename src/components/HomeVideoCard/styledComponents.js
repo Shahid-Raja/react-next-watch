@@ -8,12 +8,12 @@ export const ListItem = styled.li`
     align-self; center;
     @media screen and (min-width: 768px) {
         width: 280px;
-        margin-rigth: 20px;
+        margin-right: 20px;
     }
 `
 
 export const ThumbNailImage = styled.img`
-  widt: 100%;
+  width: 100%;
 `
 export const VideoDetails = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ export const VideoDetails = styled.div`
 `
 export const ProfileImage = styled.img`
   width: 30px;
-  heigth: 30px;
+  height: 30px;
   border-radius: 50px;
   margin: 20px;
 `
@@ -49,8 +49,8 @@ export const ViewsAndDate = styled.p`
 `
 export const Dot = styled.span`
   width: 20px;
-  heigth: 20px;
+  height: 20px;
   border-radius: 50px;
   padding-left: 5px;
-  padding-rigth: 5px;
+  padding-right: 5px;
 `

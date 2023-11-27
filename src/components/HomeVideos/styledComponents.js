@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const NoVideoView = styled.div`
+export const NoVideosView = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,7 +8,7 @@ export const NoVideoView = styled.div`
   background: none;
 `
 
-export const NoVideoImage = styled.img`
+export const NoVideosImage = styled.img`
   width: 200px;
   @media screen and (min-width: 768px) {
     width: 450px;

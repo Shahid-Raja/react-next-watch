@@ -48,8 +48,8 @@ const Header = props => (
             <HeaderLogo
               src={
                 isDarkTheme
-                  ? 'https://asserts.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
-                  : 'https://asserts.ccbp.in/frontend/react-js/nxt-watch-logo-ligth-theme-img.png'
+                  ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
+                  : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
               }
               alt="website logo"
             />
@@ -67,9 +67,10 @@ const Header = props => (
               )}
             </ThemeButton>
             <ProfileImage
-              src="https://asserts.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
+              src="https://assets.ccbp.in/frontend/react-js/nxt-watch-profile-img.png"
               alt="profile"
             />
+
             <Popup
               Modal
               trigger={

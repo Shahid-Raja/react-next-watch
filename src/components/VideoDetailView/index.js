@@ -22,7 +22,7 @@ const apiStatusConstants = {
 class VideoDetailView extends Component {
   state = {
     apiStatus: apiStatusConstants.initial,
-    videoDetails: {},
+    videoDetails: [],
     isLiked: false,
     isDisliked: false,
   }
@@ -77,7 +77,14 @@ class VideoDetailView extends Component {
   clickLiked = () => {
     this.setState(prevState => ({
       isLiked: !prevState.isLiked,
-      isDisliked: false,
+      isDisLiked: false,
+    }))
+  }
+
+  clickDisLiked = () => {
+    this.setState(prevState => ({
+      isDisLiked: !prevState.isDisLiked,
+      isLiked: false,
     }))
   }
 

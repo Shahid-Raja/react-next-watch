@@ -52,7 +52,7 @@ class Home extends Component {
     const jwtToken = Cookies.get('jwt_token')
     const url = `https://apis.ccbp.in/videos/all?search=${searchInput}`
     const options = {
-      Headers: {
+      headers: {
         Authorization: `Bearer ${jwtToken}`,
       },
       method: 'GET',
@@ -60,7 +60,7 @@ class Home extends Component {
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
-      const updateData = data.Videos.map(eachVideo => ({
+      const updatedData = data.Videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
         thumbnailUrl: eachVideo.thumbnail_Url,
@@ -70,7 +70,7 @@ class Home extends Component {
         profileImageUrl: eachVideo.channel.profile_image_Url,
       }))
       this.setState({
-        homeVideos: updateData,
+        homeVideos: updatedData,
         apiStatus: apiStatusConstants.success,
       })
     } else {
@@ -96,11 +96,11 @@ class Home extends Component {
 
   renderLoadingView = () => (
     <LoaderContainer data-testid="loader">
-      <Loader type="ThreeDots" color="#0b69ff" heigth="50" width="50" />
+      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </LoaderContainer>
   )
 
-  renderLoadingView = () => {
+  renderVideosView = () => {
     const {homeVideos} = this.state
     return <HomeVideos homeVideos={homeVideos} onRetry={this.onRetry} />
   }
@@ -141,7 +141,7 @@ class Home extends Component {
                 <BannerContainer data-testid="banner" display={display}>
                   <BannerLeftPart>
                     <BannerImage
-                      src="https://assets.ccbp.in/frontend.react-js/nxt-watch-logo-ligth-theme-img.png"
+                      src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png"
                       alt="nxt watch logo"
                     />
                     <BannerText>
@@ -161,7 +161,7 @@ class Home extends Component {
                 <SearchContainer>
                   <SearchInput
                     type="search"
-                    placeholder="search"
+                    placeholder="Search"
                     value={searchInput}
                     onChange={this.onChangeInput}
                     color={textColor}

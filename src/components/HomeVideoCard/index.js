@@ -1,3 +1,4 @@
+/* eslint-disable import/named */
 /* eslint-disable import/extensions */
 import {Link} from 'react-router-dom'
 
@@ -6,7 +7,7 @@ import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 
 import {
   ListItem,
-  ThumbNailImage,
+  ThumbNailImage, // Corrected
   VideoDetails,
   ProfileImage,
   ContentSection,

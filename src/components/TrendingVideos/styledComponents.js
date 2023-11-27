@@ -39,7 +39,7 @@ export const TrendingText = styled.h1`
 `
 export const TrendingVideoList = styled.ul`
   list-style-type: none;
-  display: felx;
+  display: flex;
   flex-direction: column;
   margin: 0px;
   padding: 0px;

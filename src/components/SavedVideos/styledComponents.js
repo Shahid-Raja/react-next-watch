@@ -31,7 +31,7 @@ export const SavedTitleIconContainer = styled.div`
 `
 export const SavedText = styled.h1`
   font-family: 'Robobto';
-  font-szie: 25px;
+  font-size: 25px;
   color: ${props => props.color};
   @media screen and (min-width: 768px) {
     font-size: 35px;

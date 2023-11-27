@@ -7,7 +7,6 @@ export const ItemLink = styled(Link)`
 `
 
 export const GamingListItem = styled.li`
-  background: none;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,9 +15,10 @@ export const GamingListItem = styled.li`
     margin-right: 20px;
   }
 `
+
 export const GamingThumbNailImage = styled.img`
   width: 100vw;
-  heigth: 300px;
+  height: 300px;
   align-self: center;
   @media screen and (min-width: 768px) {
     width: 280px;
@@ -32,14 +32,14 @@ export const GamingContentSection = styled.div`
   padding: 8px;
 `
 export const GamingTitle = styled.p`
-    font-family; 'Roboto';
-    font-size: 15px;
-    color: ${props => props.color};
-    margin-bottom: 0px;
+  font-family: Roboto;
+  font-size: 15px;
+  color: ${props => props.color};
+  margin-bottom: 0px;
 `
 
 export const GamingViewsAndDate = styled.p`
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-size: 12px;
   color: ${props => props.color};
 `

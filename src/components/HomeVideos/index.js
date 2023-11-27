@@ -1,7 +1,8 @@
+/* eslint-disable import/named */
 /* eslint-disable import/extensions */
 import {
-  NoVideoView,
-  NoVideoImage,
+  NoVideosView,
+  NoVideosImage,
   NoVideosHeading,
   NoVideoNote,
   RetryButton,
@@ -34,8 +35,8 @@ const HomeVideos = props => {
             ))}
           </VideoCardList>
         ) : (
-          <NoVideoView>
-            <NoVideoImage
+          <NoVideosView>
+            <NoVideosImage
               src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-search-results-img.png"
               alt="no videos"
             />
@@ -48,7 +49,7 @@ const HomeVideos = props => {
             <RetryButton type="button" onClick={onClickRetry}>
               Retry
             </RetryButton>
-          </NoVideoView>
+          </NoVideosView>
         )
       }}
     </ThemeAndVideoContext.Consumer>

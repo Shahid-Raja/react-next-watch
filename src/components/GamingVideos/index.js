@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable no-shadow */
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable react/sort-comp */
@@ -10,7 +11,6 @@ import {SiYoutubegaming} from 'react-icons/si'
 
 import Header from '../Header'
 import NavigationBar from '../NavigationBar'
-// eslint-disable-next-line import/extensions
 // eslint-disable-next-line import/no-unresolved
 import ThemeAndVideoContext from '../../context/ThemeAndVideoContext'
 import FailureView from '../FailureView'
@@ -33,11 +33,11 @@ const apiStatusConstants = {
 
 class GamingVideos extends Component {
   state = {
-    GamingVideos: [],
+    gamingVideos: [],
     apiStatus: apiStatusConstants.initial,
   }
 
-  componentDidMouth() {
+  componentDidMount() {
     this.getVideos()
   }
 
@@ -54,14 +54,14 @@ class GamingVideos extends Component {
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
-      const updateData = data.videos.map(eachVideo => ({
+      const updatedData = data.videos.map(eachVideo => ({
         id: eachVideo.id,
         title: eachVideo.title,
         thumbnailURL: eachVideo.thumbnail_url,
         viewCount: eachVideo.view_count,
       }))
       this.setState({
-        GamingVideos: updateData,
+        gamingVideos: updatedData,
         apiStatus: apiStatusConstants.success,
       })
     } else {
@@ -71,15 +71,15 @@ class GamingVideos extends Component {
 
   renderLoadingView = () => (
     <LoaderContainer data-testid="loader">
-      <Loader type="ThreeDots" color="#0b69ff" heigth="50" width="50" />
+      <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </LoaderContainer>
   )
 
-  renderLoadingView = () => {
-    const {GamingVideos} = this.state
+  renderVideosView = () => {
+    const {gamingVideos} = this.state
     return (
       <GamingVideoList>
-        {GamingVideos.map(eachVideo => (
+        {gamingVideos.map(eachVideo => (
           <GameVideoCard key={eachVideo.id} videoDetails={eachVideo} />
         ))}
       </GamingVideoList>

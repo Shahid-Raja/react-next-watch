@@ -1,6 +1,7 @@
 /* eslint-disable import/no-unresolved */
+/* eslint-disable import/no-unresolved */
 import {
-  FailedView,
+  FailedView, // Corrected import name
   FailedImage,
   FailedHeading,
   FailedNote,

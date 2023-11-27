@@ -2,26 +2,26 @@ import styled from 'styled-components'
 
 export const HomeContainer = styled.div`
   background-color: ${props => props.bgColor};
-  min-heigth: 100vh;
+  min-height: 100vh;
   margin-top: 60px;
-  margin-cottom: 60px;
-  overflow-y: AuthenticatorAssertionResponse;
+  overflow-y: auto; // Corrected
   @media screen and (min-width: 768px) {
-    margin_left: 350px;
-    margin_bottom: 0px;
+    margin-left: 250px;
+    margin-bottom: 0px;
   }
 `
+
 export const BannerContainer = styled.div`
   background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
-  width: 100;
-  background-size: conver;
-  heigth: 200px;
+  width: 100%;
+  background-size: cover;
+  height: 200px;
   display: ${props => props.display};
   justify-content: space-between;
   padding: 20px;
 `
 export const BannerLeftPart = styled.div`
-  width: 50px;
+  width: 50%;
 `
 export const BannerRightPart = styled.div`
   display: flex;
@@ -30,7 +30,7 @@ export const BannerRightPart = styled.div`
 
 export const BannerImage = styled.img`
   width: 80px;
-  heigth: 30px;
+  height: 30px;
 `
 export const BannerButton = styled.button`
   padding-left: 10px;
@@ -42,13 +42,14 @@ export const BannerButton = styled.button`
   background: none;
 `
 export const BannerText = styled.p`
-  font-family: 'Roboto';
+  font-family: roboto;
   font-size: 15px;
   color: #000000;
   @media screen and (min-width: 576px) {
     font-size: 20px;
   }
 `
+
 export const BannerCloseButton = styled.button`
   border: none;
   background: none;
@@ -56,7 +57,7 @@ export const BannerCloseButton = styled.button`
 `
 
 export const SearchContainer = styled.div`
-  display: 'flex';
+  display: flex;
   border: 1px solid #909090;
   border-radius: 3px;
   margin: 20px;
@@ -68,6 +69,7 @@ export const SearchContainer = styled.div`
 `
 export const SearchIconContainer = styled.button`
   display: flex;
+
   justify-content: center;
   align-items: center;
   background-color: #909090;
@@ -88,5 +90,5 @@ export const LoaderContainer = styled.div`
     display: flex;
     justify-content: center:
     align-items: center;
-    min-heigth: 80vh;
+    min-height: 80vh;
 `

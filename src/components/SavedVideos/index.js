@@ -23,7 +23,7 @@ const SavedVideos = () => (
   <ThemeAndVideoContext.Consumer>
     {value => {
       const {isDarkTheme, savedVideos} = value
-      const bgcolor = isDarkTheme ? '#0f0f0f' : '#f9f9f9'
+      const bgColor = isDarkTheme ? '#0f0f0f' : '#f9f9f9'
       const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
       const headingColor = isDarkTheme ? '#f1f5f9' : '#1e293b'
       const noteColor = isDarkTheme ? '#e2e8f0' : '#475569'
@@ -32,17 +32,17 @@ const SavedVideos = () => (
         <>
           <Header />
           <NavigationBar />
-          <SavedContainer data-testid="savedVideos" bgcolor={bgcolor}>
+          <SavedContainer data-testid="savedVideos" bgColor={bgColor}>
             <SavedVideoTitle>
               <SavedTitleIconContainer>
-                <CgPlayListAdd size={35} color="ff0000" />
+                <CgPlayListAdd size={35} color="#ff0000" />
               </SavedTitleIconContainer>
               <SavedText color={textColor}>Saved Videos</SavedText>
             </SavedVideoTitle>
             {savedVideos.length > 0 ? (
               <SavedVideoList>
-                {savedVideos.map(eachvideo => (
-                  <VideoCard key={eachvideo.id} videoDetails={eachvideo} />
+                {savedVideos.map(eachVideo => (
+                  <VideoCard key={eachVideo.id} videoDetails={eachVideo} />
                 ))}
               </SavedVideoList>
             ) : (
@@ -51,10 +51,10 @@ const SavedVideos = () => (
                   src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-saved-videos-img.png"
                   alt="no saved videos"
                 />
-                <NoSavedVideosHeading headingcolor={headingColor}>
+                <NoSavedVideosHeading headingColor={headingColor}>
                   No saved videos found
                 </NoSavedVideosHeading>
-                <NoSavedVideosNote notecolor={noteColor}>
+                <NoSavedVideosNote noteColor={noteColor}>
                   Your can save your videos while watching
                 </NoSavedVideosNote>
               </NoSavedVideosView>

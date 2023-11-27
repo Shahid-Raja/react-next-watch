@@ -32,16 +32,16 @@ class NavigationBar extends Component {
         const textColor = isDarkTheme ? '#f9f9f9' : '#231f20'
         const activeTabBg = isDarkTheme ? '#475569' : '#cbd5e1'
         const onClickTabHome = () => {
-          changeTab('HOME')
+          changeTab('Home')
         }
         const onClickTabTrending = () => {
-          changeTab('TRENDING')
+          changeTab('Trending')
         }
-        const onClickTabGAMING = () => {
-          changeTab('GAMING')
+        const onClickTabGaming = () => {
+          changeTab('Gaming')
         }
         const onClickTabSaved = () => {
-          changeTab('SAVED')
+          changeTab('Saved')
         }
 
         return (
@@ -50,12 +50,12 @@ class NavigationBar extends Component {
               <NavOptions>
                 <NavLink to="/">
                   <NavLinkContainer
-                    key="HOME"
-                    bgColor={activeTab === 'HOME' ? activeTabBg : 'none'}
+                    key="home"
+                    bgColor={activeTab === 'Home' ? activeTabBg : 'none'}
                     onClick={onClickTabHome}
                   >
                     <AiFillHome
-                      color={activeTab === 'HOME' ? '#ff0b37' : '#909090'}
+                      color={activeTab === 'Home' ? '#ff0b37' : '#909090'}
                       size={30}
                     />
                     <NavText color={textColor}>Home</NavText>
@@ -64,7 +64,7 @@ class NavigationBar extends Component {
                 <NavLink to="/trending">
                   <NavLinkContainer
                     key="trending"
-                    bgcolor={activeTab === 'Trending' ? activeTabBg : 'none'}
+                    bgColor={activeTab === 'Trending' ? activeTabBg : 'none'}
                     onClick={onClickTabTrending}
                   >
                     <HiFire
@@ -78,8 +78,8 @@ class NavigationBar extends Component {
                 <NavLink to="/gaming">
                   <NavLinkContainer
                     key="gaming"
-                    bgcolor={activeTab === 'Gaming' ? activeTabBg : 'none'}
-                    onClick={onClickTabGAMING}
+                    bgColor={activeTab === 'Gaming' ? activeTabBg : 'none'}
+                    onClick={onClickTabGaming}
                   >
                     <SiYoutubegaming
                       color={activeTab === 'Gaming' ? '#ff0b37' : '#909090'}
@@ -92,14 +92,14 @@ class NavigationBar extends Component {
                 <NavLink to="/saved-videos">
                   <NavLinkContainer
                     key="saved"
-                    bgcolor={activeTab === 'Saved' ? activeTabBg : 'none'}
+                    bgColor={activeTab === 'Saved' ? activeTabBg : 'none'}
                     onClick={onClickTabSaved}
                   >
                     <CgPlayListAdd
                       color={activeTab === 'Saved' ? '#ff0b37' : '#909090'}
                       size={30}
                     />
-                    <NavText color={textColor}>Saved</NavText>
+                    <NavText color={textColor}>Saved Videos</NavText>
                   </NavLinkContainer>
                 </NavLink>
               </NavOptions>
@@ -129,7 +129,7 @@ class NavigationBar extends Component {
                 <AiFillHome
                   size={30}
                   onClick={onClickTabHome}
-                  color={activeTab === 'HOME' ? '#ff0b37' : '#909090'}
+                  color={activeTab === 'Home' ? '#ff0b37' : '#909090'}
                 />
               </NavLink>
               <NavLink to="/trending">
@@ -142,7 +142,7 @@ class NavigationBar extends Component {
               <NavLink to="/gaming">
                 <SiYoutubegaming
                   size={30}
-                  onClick={onClickTabGAMING}
+                  onClick={onClickTabGaming}
                   color={activeTab === 'Gaming' ? '#ff0b37' : '#909090'}
                 />
               </NavLink>

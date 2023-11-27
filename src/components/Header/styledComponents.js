@@ -8,20 +8,20 @@ export const NavbarHeader = styled.nav`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  heigth: 60px;
+  height: 60px;
   width: 100%;
   background-color: ${props => props.bgColor};
   @media screen and (min-width: 768px) {
     padding-left: 30px;
-    padding-rogth: 30px;
+    padding-right: 30px;
   }
 `
 export const HeaderLogo = styled.img`
   width: 80px;
-  heigth: 30px;
+  height: 30px;
   @media screen and (min-width: 768px) {
     width: 100px;
-    heigth: 40px;
+    height: 40px;
   }
 `
 
@@ -33,13 +33,13 @@ export const ActionsContainer = styled.div`
 export const ThemeButton = styled.button`
   background: none;
   border: none;
-  margin-rigth: 10px;
+  margin-right: 10px;
 `
 export const LogoutButton = styled.button`
   border: 1px solid;
-  font-family: 'Roboto';
+  font-family: Roboto;
   padding-left: 10px;
-  padding-rigth: 10px;
+  padding-right: 10px;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 5px;
@@ -88,7 +88,7 @@ export const CloseButton = styled.button`
   outline: none;
   cursor: pointer;
   border-radius: 6px;
-  font-family: 'Roboto';
+  font-family: Roboto;
   font-weight: bold;
   font-size: 12px;
   @media screen and (min-width: 768px) {
@@ -116,7 +116,7 @@ export const ConfirmButton = styled.button`
   @media screen and (min-width: 768px) {
     font-size: 15px;
     padding: 13px;
-    padding-rigth: 20px;
+    padding-right: 20px;
     padding-left: 20px;
   }
 `

@@ -11,7 +11,7 @@ export const FormContainer = styled.form`
   flex-direction: column;
   padding: 30px;
   border-radius: 8px;
-  box-shawdow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: 350px;
 `
 export const LoginLogo = styled.img`

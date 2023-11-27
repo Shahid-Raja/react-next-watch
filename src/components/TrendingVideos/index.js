@@ -33,7 +33,7 @@ class TrendingVideos extends Component {
   }
 
   componentDidMount() {
-    this.getTrendingVideos()
+    this.getVideos()
   }
 
   getVideos = async () => {
@@ -94,7 +94,7 @@ class TrendingVideos extends Component {
     const {apiStatus} = this.state
     switch (apiStatus) {
       case apiStatusConstants.success:
-        return this.renderVideosView()
+        return this.renderVideoView()
       case apiStatusConstants.failure:
         return this.renderFailureView()
       case apiStatusConstants.inProgress:
