@@ -22,6 +22,7 @@ import {
   GamingVideoTitle,
   GamingVideoList,
   GamingText,
+  LoaderContainer,
 } from './styledComponents'
 
 const apiStatusConstants = {
